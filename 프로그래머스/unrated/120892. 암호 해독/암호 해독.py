@@ -1,3 +1,1 @@
-def solution(cipher, code):
-    decoded = cipher[code - 1::code]
-    return decoded
+solution = lambda cipher, code: cipher[code - 1::code]
