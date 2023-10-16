@@ -1,1 +1,1 @@
-solution = lambda cipher, code: cipher[code - 1::code]
+solution = lambda a, b: a[b - 1::b]
