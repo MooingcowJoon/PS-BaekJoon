@@ -47,7 +47,6 @@ public class Main {
         int n = Integer.parseInt( br.readLine());
         int[][] arr= new int[n][];
         StringTokenizer st;
-        StringBuilder sb= new StringBuilder();
         for( int i=0; i<n; i++){
             st= new StringTokenizer(br.readLine());
             int l = st.countTokens();
