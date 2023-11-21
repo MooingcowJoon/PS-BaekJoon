@@ -31,13 +31,13 @@ public class Main {
             }
             return true;
         }
-        while(k>=0 && set.higher(num[k])==10){
-            k--;
-        }
-        if(k==-1){
-            return false;
+        while(k>0 && set.higher(num[k])==10){
+                k--;
         }
         num[k]=set.higher(num[k]);
+        if(k==0 && num[k]==10){
+                return false;
+        }
         for(int i=k+1; i<num.length; i++){
             num[i]=min;
         }
@@ -51,18 +51,18 @@ public class Main {
             return true;
         }
         while(k>0 && set.lower(num[k])==-1){
-            num[k]=0;
-            k--;
+            num[k--]=0;
         }
+
         if(k==0){
-            if(num.length>2){
-                k=1;
-            }else{
+            if(num.length<3){
                 return false;
             }
+            k=1;
         }else{
             num[k]=set.lower(num[k]);
         }
+
         for(int i=k+1; i<num.length; i++){
             num[i]=max;
         }
